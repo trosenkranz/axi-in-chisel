@@ -1,5 +1,4 @@
-axi-in-chisel
-=============
+# axi-in-chisel
 by Yaman Umuroglu (yamanu@idi.ntnu.no)
 
 A collection of AXI4 interface definitions and simple peripherals in Chisel.
@@ -17,3 +16,7 @@ SimpleReg - a translation of the AXI Lite slave template (register file) generat
 SumAccel - read 3 consecutive words from address 0x10000000 using AXI Lite master and sum them (the result can be read through the AXI Lite slave interface)
 
 HPSumAccel - read specified number of words from specified address in large bursts and sum them. Note that number of words should be a multiple of the burst length (set to 512 32-bit words by default), since this doesn't handle chopping the burst into bits. The result and total elapsed cycles can be read through the slave interface.
+
+# Compile and run
+
+To compile the examples execute `sbt AXI-Examples/run` within the main directory.
